@@ -1,6 +1,6 @@
 Package: OCBEdev
 Title: Extra development tools for R packages
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R:
     person(
         "Waldir", "Leoncio", email = "w.l.netto@medisin.uio.no",
