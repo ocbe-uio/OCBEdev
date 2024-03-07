@@ -8,6 +8,13 @@
 # There is, however, a slight risk of collision if two features are started
 # within the same second. This is considered an acceptable risk.
 
+#' @title Add a feature version number to an R package
+#' @description Adds a feature version number to an R package, namely by adding a
+#' dash and the Unix epoch at the time the command was ran to the build version.
+#' @param pkg_path The path to the package. Defaults to the current working
+#' @return An updated package DESCRIPTION, with the feature version number added.
+#' @author Waldir Leoncio
+#' @export
 add_feature_version <- function(pkg_path = ".") {
   # Load the DESCRIPTION file
   desc_path <- file.path(pkg_path, "DESCRIPTION")
@@ -33,6 +40,13 @@ add_feature_version <- function(pkg_path = ".") {
   }
 }
 
+#' @title Removes the feature version number from an R package
+#' @description Reverts the work done by [add_feature_version()] by removing the
+#' feature version number from the package's DESCRIPTION file.
+#' @param pkg_path The path to the package. Defaults to the current working
+#' @return An updated package DESCRIPTION, with the feature version number removed.
+#' @author Waldir Leoncio
+#' @export
 remove_feature_version <- function(pkg_path = ".") {
   # Load the DESCRIPTION file
   desc_path <- file.path(pkg_path, "DESCRIPTION")
